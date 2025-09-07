@@ -1,4 +1,14 @@
 ---
+layout: default
+title: Welcome
+hero:
+  title: Class of 2028 — Senior Hub
+  subtitle: Tux & dress rentals, senior portraits, and school news. Each senior can have a personal page with links and contact info.
+  cta_label: Explore the Directory
+  cta_url: /seniors/
+---
+
+---
 layout: home
 title: Welcome
 ---
