@@ -75,3 +75,14 @@ p,li{color:#333}
 .links a{border-color:var(--border)}
 .links a:hover{border-color:var(--brand)}
 .site-footer{border-top:1px solid var(--border);padding:1.5rem 0;color:var(--muted);background:#fff}
+.brand-logo {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+.brand-text {
+  font-weight: 700;
+  letter-spacing: .3px;
+  color: #fff; /* change to #000 if you want black text */
+}
+
