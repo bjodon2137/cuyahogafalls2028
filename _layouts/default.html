@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page.title }} — {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-mark">CF</span>
+        <span class="brand-text">{{ site.title }}</span>
+      </a>
+      <nav>
+        <a href="{{ '/seniors/' | relative_url }}">Senior Directory</a>
+        <a href="{{ '/vendors/' | relative_url }}">Vendors & Services</a>
+        <a href="{{ '/news/'    | relative_url }}">News</a>
+      </nav>
+    </div>
+  </header>
+
+  {% if page.hero %}
+  <section class="hero">
+    <div class="container">
+      <h1>{{ page.hero.title }}</h1>
+      <p>{{ page.hero.subtitle }}</p>
+      {% if page.hero.cta_url %}
+        <a class="btn" href="{{ page.hero.cta_url }}">{{ page.hero.cta_label | default: 'Explore' }}</a>
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  <main class="container page-content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© {{ site.title }} — {{ site.description }}</p>
+    </div>
+  </footer>
+</body>
+</html>
