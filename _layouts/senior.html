@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.first_name }} {{ page.last_name }} — {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+</head>
+<body class="page">
+  <main class="container">
+    <a href="{{ '/' | relative_url }}">← Back to Home</a>
+    <header class="hero">
+      <img class="avatar" src="{{ page.photo | default: '/assets/img/example-senior.jpg' | relative_url }}" alt="{{ page.first_name }} {{ page.last_name }}">
+      <h1>{{ page.first_name }} {{ page.last_name }}</h1>
+      {% if page.email %}<p><a href="mailto:{{ page.email }}">{{ page.email }}</a></p>{% endif %}
+      <p class="bio">{{ page.bio }}</p>
+    </header>
+
+    {% if page.links %}
+    <section>
+      <h2>Quick Links</h2>
+      <ul class="links">
+        {% for l in page.links %}
+        <li><a href="{{ l.url }}">{{ l.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    <section class="content">
+      {{ content }}
+    </section>
+  </main>
+</body>
+</html>

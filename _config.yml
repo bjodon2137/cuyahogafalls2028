@@ -1,0 +1,28 @@
+title: Cuyahoga Falls Class of 2028
+description: Resources and news hub for seniors
+theme: minima
+
+# Build settings
+plugins:
+  - jekyll-feed
+
+collections:
+  seniors:
+    output: true
+    permalink: /seniors/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "seniors"
+    values:
+      layout: senior
+      sidebar: true
+
+# Navigation links shown by minima theme
+header_pages:
+  - seniors/index.md
+  - vendors.md
+  - news.md
+
+# Optional: set your custom domain later by adding a CNAME file with just the domain inside

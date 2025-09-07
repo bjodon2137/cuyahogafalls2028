@@ -1,0 +1,15 @@
+tux_rentals:
+  - name: Example Tux Co.
+    url: https://example.com/tux
+    phone: "(330) 555-1212"
+  - name: Black Tie Rentals
+    url: https://example.com/blacktie
+    phone: "(330) 555-3434"
+
+photographers:
+  - name: Summit Portraits
+    url: https://example.com/summit
+    phone: "(330) 555-5656"
+  - name: Falls Photo Studio
+    url: https://example.com/fallsphoto
+    phone: "(330) 555-7878"
